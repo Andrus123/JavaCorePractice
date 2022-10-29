@@ -20,6 +20,7 @@ public class SDemo3 {
 
 		System.out.println("Square root of 2 is "+ StaticBlock.rootOf2);
 		System.out.println("Square root of 3 is "+ StaticBlock.rootOf3);
+		System.out.println(ob);
 	}
 
 }
