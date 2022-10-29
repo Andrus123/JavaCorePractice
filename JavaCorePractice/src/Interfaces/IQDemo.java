@@ -1,5 +1,8 @@
 package Interfaces;
 
+import ExceptionHandles.QueueEmptyException;
+import ExceptionHandles.QueueFullException;
+
 // A fixed-size queue class for characters
 class FixedQueue implements ICharQ {
 	private char[] q; // this array holds the queue
@@ -106,7 +109,7 @@ class DynQueue implements ICharQ {
 }
 
 class IQDemo {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws QueueFullException, QueueEmptyException {
 		FixedQueue q1 = new FixedQueue(10);
 		DynQueue q2 = new DynQueue(5);
 		CircularQueue q3 = new CircularQueue(10);
