@@ -47,6 +47,7 @@ class Help {
 			} while (ch != -1);
 		} catch (IOException exc) {
 			System.out.println("Error accessing help file.");
+			System.out.println(exc);
 			return false;
 		}
 		return false; // topic not found
@@ -71,7 +72,7 @@ class Help {
 // Demonstrate the file-based Help system.
 class FileHelp {
 	public static void main(String[] args) {
-		Help hlpobj = new Help("helpfile.txt");
+		Help hlpobj = new Help("C:\\Users\\andru\\git\\javacorepractice\\JavaCorePractice\\src\\usingIO\\helpfile.txt");
 		String topic;
 
 		System.out.println("Try the help system. Enter 'stop' to end.");

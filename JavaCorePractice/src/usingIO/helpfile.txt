@@ -5,11 +5,11 @@ else statement;
 #switch
 switch(expression) { // traditional form
 	case constant:
-	statement sequence
-	break;
-	// ...
-}
-
+		statement sequence
+		break;
+		// ...
+	}
+	
 #for
 for(init; condition; iteration) statement;
 
