@@ -2,6 +2,7 @@ package ExceptionHandles;
 
 public class UseFinally {
 	public static void getException(int what) {
+		@SuppressWarnings("unused")
 		int t;
 		int[] nums = new int[2];
 
