@@ -34,6 +34,7 @@ public class LambdaDemo {
 		System.out.println("Reciprocal of 4 is " + myPval.getValue(4.0));
 		System.out.println("Reciprocal of 8 is " + myPval.getValue(8.0));
 		
+		System.out.println("Hola mundo");
 		// A lambda expression must be compatible with the method
 		// defined by the functional interface. Therefore, these won't work.
 //		myVal = () -> "three"; // Error! String not compatible with double
