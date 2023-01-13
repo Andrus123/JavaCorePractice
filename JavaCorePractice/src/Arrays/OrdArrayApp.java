@@ -12,24 +12,23 @@ class OrdArray {
 	public int size() {
 		return nElems;
 	}
+	// Binary search algorithm
 	public int find(long searchKey) {
 		int lowerBound = 0;
 		int upperBound = nElems - 1;
 		int curIn;
 		
-		while(true) {
+		while(lowerBound <= upperBound) {
 			curIn = (lowerBound + upperBound) / 2;
-			if(a[curIn] < searchKey)
+			if(a[curIn] == searchKey)
 				return curIn;	// found it
-			else if(lowerBound > upperBound)
-				return nElems; // can't find it
-			else {
-				if(a[curIn] < searchKey)
-					lowerBound = curIn + 1; // it's in upper half
+			
+				if(a[curIn] > searchKey)
+					upperBound = curIn - 1; // it's in upper half
 				else
-					upperBound = curIn - 1; // it's in lower half
-			}	// end else divide range
+					lowerBound = curIn + 1; // it's in lower half
 		} // end while
+		return nElems;
 	} // end find()
 	
 	public void insert(long value) // put element into array
@@ -81,7 +80,7 @@ public class OrdArrayApp {
 		arr.insert(66);
 		arr.insert(33);
 		
-		int searchKey = 55;			// search for item
+		int searchKey = 99;			// search for item
 		if(arr.find(searchKey) != arr.size())
 			System.out.println("Found " + searchKey);
 		else
