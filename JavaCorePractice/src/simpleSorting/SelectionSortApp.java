@@ -23,7 +23,7 @@ class ArraySel {
 		for(out=0; out<nElems-1; out++) // outer loop
 		{
 			min = out;
-			for (in = out; in < nElems; in++)
+			for (in = out+1; in < nElems; in++)
 				if(a[in] < a[min])
 					min = in;
 			swap(out, min);
